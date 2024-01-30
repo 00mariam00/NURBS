@@ -249,7 +249,7 @@ a{
     height: 300px;
     width: 250px;
     background-color: cornflowerblue;
-    background-image: url(./asset/mariam.JPG);     
+    background-image: url(./asset/Aurélien.JPG);     
     background-size: cover;
     background-position:center; 
     background-repeat: no-repeat;
@@ -264,7 +264,7 @@ a{
     height: 300px;
     width: 250px;
     background-color: brown;
-    background-image: url(./asset/mariam.JPG);     
+    background-image: url(./asset/Brieuc.JPG);     
     background-size: cover;
     background-position:center; 
     background-repeat: no-repeat;
@@ -279,7 +279,22 @@ a{
     height: 300px;
     width: 250px;
     background-color: coral;
-    background-image: url(./asset/mariam.JPG);     
+    background-image: url(./asset/Thomas.JPG);     
+    background-size: cover;
+    background-position:center; 
+    background-repeat: no-repeat;
+    margin: 50px 0;
+    border-radius: 20px;
+
+}
+
+.photo-5{
+    display: flex; 
+    align-items: flex-end;
+    height: 300px;
+    width: 250px;
+    background-color: coral;
+    background-image: url(./asset/Samuel.JPG);     
     background-size: cover;
     background-position:center; 
     background-repeat: no-repeat;
@@ -296,6 +311,8 @@ a{
 }.photo-3:hover{
     cursor: pointer;
 }.photo-4:hover{
+    cursor: pointer;
+} .photo-5:hover{
     cursor: pointer;
 }
 
@@ -328,6 +345,12 @@ a{
 .photo-4:hover{
     box-shadow: 4px 2px 29px 0 rgba(146, 66, 156, 0.63);
 }
+.photo-5{
+    box-shadow: 4px 2px 29px 0 rgba(106, 66, 156, 0.63);
+}
+.photo-5:hover{
+    box-shadow: 4px 2px 29px 0 rgba(146, 66, 156, 0.63);
+}
 
 
 .photo-1:hover .prenom_text{
@@ -349,9 +372,19 @@ a{
     transform: translate(12px); 
     text-shadow: 0.4px 1px 2px;
 }
+.photo-5:hover .prenom_text{
+    transform: translate(12px); 
+    text-shadow: 0.4px 1px 2px;
+}
+
 
 .prenom{
     font-style: italic;
     text-decoration: underline;
 }
 
+.white{
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
