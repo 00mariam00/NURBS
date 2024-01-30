@@ -238,6 +238,7 @@ margin-top: 20px;
     justify-content: center; 
     height: 700px;
     width: 90%; 
+    margin-bottom: 10px; /* Ajustez cette valeur selon vos préférences */
     font-family: "Poppins", sans-serif; 
 }
 
@@ -399,4 +400,43 @@ margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+.centrer-image {
+    text-align: center;
+}
+
+.image-reg-2 img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto; /* Pour centrer l'image horizontalement */
+}
+
+.legende {
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 10px; /* Marge supérieure pour espacement */
+}
+
+.legende span a {
+    color: #888; /* Couleur du texte gris pour le lien uniquement */
+    text-decoration: none; /* Supprime le soulignement du lien */
+}
+
+.conteneur-image {
+    text-align: center;
+    margin-top: 20px; /* Marge au-dessus de l'image et de la légende */
+}
+
+.legende {
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 10px; /* Espacement entre la légende et la source */
+}
+
+.legende a {
+    color: #888; /* Couleur du texte gris pour le lien de la source */
+    text-decoration: none; /* Supprime le soulignement du lien */
 }
