@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="style.css">
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-        <title>Première étape - TOTO MODIF</title>
+        <title>BNR et Analyse des résultats</title>
 
     </head>
 
@@ -50,18 +50,10 @@
             <div class="titre_partie">
 
                 <div>
-                    Optimisation Topologique avec SANTO
+                    Base de non-régression et Analyse des résultats
                 </div>
                 
                 
-            </div>
-
-            <div class="titre_photo"></div>
-    
-            <div class="trait-niveau">
-
-                <div class="trait-intro"></div>
-
             </div>
 
             <div class="first">
@@ -72,131 +64,134 @@
                         
                         <div>
                             <div class="espace-vertical"></div>
-                            <div class="gras">C'est quoi l'Optimisation Topologique ? :</div> </br>
-                            <p><b>L'Optimisation Topologique</b> est une méthode mathématique qui optimise la disposition des matériaux à l'intérieur d'un espace de conception donné. Elle prend en compte des paramètres de conception tels que les charges attendues, les conditions aux limites, les contraintes, les matériaux et les coûts. L'objectif principal de l'optimisation topologique est de maximiser les performances d'un système en créant des conceptions avec une masse minimale et une rigidité maximale, et elle est généralement intégrée tôt dans le processus de conception.</p> <br> <br>
-                        
-
-                            <div class="trait-fin"> </div>
+                            <div class="gras">Base de non-régression :</div> </br>
+                            <p>L'usage de la <b>Base de non-régression (BNR)</b> nous permet de valider l'implémentation du stockage LIL/CSR : à la fois dans <i>local_support</i> pour la comparaison entre le hash de la matrice obtenu sans et avec stockage, mais aussi pour l'optimisation des fichiers <i>volume</i> et <i>compliance</i> où l'on cherche à obtenir des résultats identiques pour les opérations liées au stockage LIL/CSR employé.                                                                                                                                                      
+                            
+                            <div class="trait-fin"> </div></br>
                             
                         </div>
                         
                     </div>
-                    
-                    <!-- <div class="image-1"></div> -->
 
                 </div>
                 
             </div>
 
-            <div class="first">
+            <div class="contenu">
 
-                <div class="contenu">
+                <div class="ecrire-1">
+                    
+                    <div>
+                        <div class="gras">Résultats obtenus</div>
+                    </div>
+                    
+                </div>
+
+            </div>
+                
+            <div class="first-1">
+
+                <div class="contenu-1">
+
+                    <div class="conteneur-image">
+                        <img src="./images/Prod.png" >
+                        <div class="legende">
+                            <b>Figure 1</b> - Speedup pour un produit matriciel avec stockage CSR
+                            <br>
+                        </div>
+                    </div>            
+                    
+                    <div class="ecrire_3">
+                        
+                        <div>
+                            <div class="gras">Stockage <b>LIL/CSR</b>:</div> <br>
+                            <p> La figure ci-contre illustre l'évolution du speed-up en fonction de la taille de la matrice à laquelle on applique le stockage. Plus la matrice est creuse, plus le speed-up est important, et plus le stockage CSR est intéressant. Ce format de stockage est néanmoins incompatible avec la bibliothèque Numba (que nous n'utiliserons pas par conséquent).
+
+                           </p>                    
+                            <div class="trait-fin"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="first-2">
+
+                <div class="contenu-1">
 
                     <div class="ecrire-1">
-                        
+
                         <div>
-                            L'optimisation topologique implique la résolution d'équations mathématiques pour déterminer la distribution optimale des matériaux dans un domaine de conception donné. Les équations spécifiques peuvent varier en fonction de la méthode d'optimisation utilisée et des objectifs spécifiques de l'optimisation. Cependant, voici un exemple simplifié d'une équation couramment utilisée dans l'optimisation topologique : <br> <br>
-
+                            <table border="1">
                             
-                            Supposons que nous ayons un domaine de conception 2D (par exemple, une plaque) et que nous souhaitions optimiser la distribution des matériaux pour minimiser la déformation sous une charge donnée. L'équation de base pour ce problème pourrait être la suivante :<br> <br>
-                            <div class="centrer equation">
-                                \( J = \frac{1}{2} \int_{\Omega} \sigma(\mathbf{u}) : \varepsilon(\mathbf{u}) \, d\Omega \)
-                            </div>
-                            <p>Où :</p>
-                            <div class="espace-vertical"></div>
-                            <ul>
-                                <li> \(J\) est la fonction objectif que nous cherchons à minimiser (par exemple, la déformation totale).</li>
-                                <li> \(\Omega\) représente le domaine de conception.</li>
-                                <li> \(\mathbf{u}\) est le champ de déplacement dans le domaine.</li>
-                                <li> \(\sigma(\mathbf{u})\) est le tenseur de contrainte dépendant du déplacement.</li>
-                                <li> \(\varepsilon(\mathbf{u})\) est le tenseur de déformation calculé à partir du déplacement.</li>
-                                <li> L'intégrale sur \(\Omega\) représente l'intégration sur tout le domaine.</li>
-                            </ul>
-                            <div class="espace-vertical"></div>
-                            <div class="espace-vertical"></div>
+                                <tr>
+                                    <th> Dimension choisie du problème </th>
+                                    <th> Implémentation de départ </th>
+                                    <th> Avec stockage CSR/LIL </th>
+                                </tr>
+                                <tr>
+                                    <td>30x30x30</td>
+                                    <td>45 s</td>
+                                    <td>60 s</td>
+                                </tr>
+                                <tr>
+                                    <td>60x60x60</td>
+                                    <td>12 min 40</td>
+                                    <td>12 min</td>
+                                </tr>
+                            </table>
+                    
+                            <br>
+                            <br>
+                    
+                            <table border="1">
+                                <tr>
+                                    <th> Dimension choisie du problème </th>
+                                    <th> Implémentation de départ </th>
+                                    <th> Avec stockage CSR/LIL </th>
+                                </tr>
+                                <tr>
+                                    <td>30x30x30</td>
+                                    <td>45 s</td>
+                                    <td>60 s</td>
+                                </tr>
+                            </table>
+                    
+                    
+                        </div>
 
-                            L'objectif fondamental de cette équation réside dans la recherche de la disposition optimale des matériaux au sein du domaine <span class="omega">Ω</span>. Cette recherche vise à minimiser la déformation tout en respectant rigoureusement les contraintes et les conditions aux limites appropriées.
-                            <div class="espace-vertical"></div>
-                            Pour résoudre cette équation, on fait fréquemment appel à des méthodes numériques telles que la méthode Solid Isotropic Material with Penalization (SIMP). Cette méthode permet de discrétiser le domaine et de résoudre le problème de manière itérative. Elle est largement utilisée dans le domaine de l'optimisation topologique.
-                            <div class="espace-vertical"></div>
-                            Le fonctionnement de la méthode SIMP repose sur la discrétisation du domaine en éléments finis et l'ajustement de la densité des matériaux dans chaque élément. L'objectif est de minimiser ou maximiser une fonction objectif, tout en tenant compte des contraintes et des conditions aux limites. La méthode SIMP impose des pénalités aux éléments en fonction de leur densité, favorisant ainsi l'élimination du matériau superflu.
-                            <div class="espace-vertical"></div>
-                            L'optimisation topologique s'adapte à des objectifs spécifiques, des contraintes particulières et des méthodes variées. Cependant, la méthode SIMP demeure une approche répandue pour obtenir des conceptions optimales en minimisant la masse tout en maximisant la rigidité, dans le contexte de la résolution de ces équations.
-                                                        
-                        
-                            <div class="trait-fin"> </div>
-                            
+                        <br>
+
+                        <div class="legende">
+                            <b>Figure 2 </b> - Tableaux de mesures de temps d'exécution pour la construction du support local et des gradients volumiques et de contrainte
+                            <br>
                         </div>
                         
+
                     </div>
                     
-                    <!-- <div class="image-1"></div> -->
+
+                    <div class="ecrire_1">
+                        
+                        <div>
+                            <div class="gras">Temps de calcul :</div> <br>
+                            <p> Les temps de calcul mesurés pour les étapes <i>pre-process</i> (avec SANTO) sont indiqués dans les tableaux ci-contre. Le stockage LIL/CSR permet, tout en économisant de l'espace mémoire, d'économiser drastiquement en temps d'exécution. L'optimisation des constructions des gradients est également favorisée par ce type de stockage de matrice. Le code global obtenu en est 5 fois plus rapide.
+                           </p>        
+                           <br>
+
+                           <div class="trait-fin"> </div> 
+                        </div>
+                    </div>
+                    
 
                 </div>
                 
             </div>
-
-
-
-            <div class="first">
-
-                    <div class="contenu">
-
-                        
-                        <div class="ecrire">
-                            
-                            <div>
-                                
-                                <div class="gras">Titre:</div>  </br>
-                                    Text                                
-                                
-                                <div class="trait-fin"> </div>
-                                
-                            </div>
-                            
-                        </div>
-
-                        <ul class="image-reg-2">
-                            <img src="./images/OT_process.jpg" alt="" class="Ecoulement-lin">
-                            <div class="legende">Figure 2 : image </div>
-                        </ul>
-                        
-                    </div>
-
-            </div>
-
-
-            
-            <div class="first">
-                
-                <div class="contenu">
-                    
-                    <ul class="image-reg-2">
-                        <img src="./images/OT_process.jpg" alt="" class="Ecoulement-lin">
-                        <div class="legende">Figure 3 : image </div>
-                    </ul>
-                    
-                    <div class="ecrire">
-                        
-                        <div>
-                            
-                            
-                            <div class="gras"> Titre :</div>  </br>
-                                Text                            
-                            
-                            <div class="trait-fin"> </div>
-                            
-                        </div>
-                        
-                    </div>
-                    
-                    
-                </div>
-                
-            </div>
-            
-           
-            <!-- <iframe width="200" height="320" class= "image-12" src="./asset/Enregistrement de l’écran 2022-11-06 à 15.58.15.mov"> </iframe> -->
 
             
             <div class="bas">
