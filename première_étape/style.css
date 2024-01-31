@@ -8,7 +8,6 @@
 
 body{
     scroll-behavior: smooth;
-    /* background-image: url("./asset/givrage.jpeg");   */
     background-size: cover;
     background-position:top; 
     background-repeat: no-repeat;
@@ -50,8 +49,9 @@ a{
 
 .all{
     
-    /* height: 350vh; */
+    /* height: 500vh; */
     height: auto; 
+    /* background-color: #000651; */
 
 }
 
@@ -125,17 +125,16 @@ a{
 
 
 
-
 .logo_art{
-    width: 150px;
-    height: 70px;
-    margin-left: 30px;
-    margin-bottom: 20px;
-    background-image: url("./asset/Inr_logo_fr_rouge.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-top: 20px;
+width: 150px;
+height: 70px;
+margin-left: 30px;
+margin-bottom: 20px;
+background-image: url("./asset/Inr_logo_fr_rouge.png");
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+margin-top: 20px;
 }
 
 
@@ -157,13 +156,10 @@ a{
     /* background-color: black;  */
 }
 
-
-
-
 .titre_photo{
     width: 100%;  
-    height: 500px;
-    background-image: url("./images/processeur.jpeg");  
+    height: 700px;
+    background-image: url("./asset/OT_coveer.webp");  
     background-size: cover;
     background-position:center; 
     background-repeat: no-repeat;
@@ -174,7 +170,7 @@ a{
 .titre_photo-1{
     width: 100%;  
     height: 500px;
-    background-image: url("./asset/avion.jpg");  
+    background-image: url("./asset/what-are-nurbs.jpg");  
     background-size: cover;
     background-position:center; 
     background-repeat: no-repeat;
@@ -200,36 +196,37 @@ a{
 }
 
 
-
-
-.contenu-1{
+.first{
 
     display: flex; 
-    flex-direction: row; 
-    justify-content: space-around; 
-    margin-top: 30px; 
-    height: 400px; 
+    justify-content: center; 
+    align-items: center; 
+    height: 80vh; 
     width: 100%; 
-    
+
 }
 
 .contenu{
+
     display: flex; 
     flex-direction: row; 
     justify-content: space-around; 
-    margin-top: 30px; 
-    height: 1000px; 
+    height: 900px; 
     width: 100%; 
-    
+    background-color: rgb(255, 255, 255);  
+
 }
 
+.ecrire{
 
-.contenu-2{
-    display: flex; 
-    flex-direction: column; 
-    justify-content: space-around; 
-    height: 400px; 
-    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    /*background-color: #3c8786;*/
+    align-content: center;
+    justify-content: center; 
+    height: 700px;
+    width: 35%; 
+    font-family: "Poppins", sans-serif; 
     
 }
 
@@ -238,105 +235,59 @@ a{
     display: flex; 
     flex-direction: column; 
     align-content: center;
-    height: 300px;
-    width: 80%; 
+    justify-content: center; 
+    height: 700px;
+    width: 90%; 
+    margin-bottom: 10px; /* Ajustez cette valeur selon vos préférences */
     font-family: "Poppins", sans-serif; 
 }
 
-.ecrire{
+.ecrire-2{
 
-    display: flex; 
-    flex-direction: column; 
-    align-content: center;
-    height: 600px;
-    width: 40%; 
-    font-family: "Poppins", sans-serif; 
-
-}
-
-
-.ecrire-3{
-    display: flex; 
-    flex-direction: column; 
-    align-content: center;
-    height: 600px;
-    width: 40%; 
-    font-family: "Poppins", sans-serif; 
-
-}
-
-
-.image{
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    height: 750px;
-    width: 600px;
-
+    /*background-color: #3c8786;*/
+    align-content: center;
+    justify-content: center; 
+    height: 600px;
+    width: 40%; 
+    font-family: "Poppins", sans-serif; 
 }
 
 .image-1{
-    margin-top: 200px;
-    height: 300px;
-    width: 500px;
+
+    height: 200px;
+    width: 70%; 
+    background-image: url("./images/dask_comp.png");  
+    background-size: cover;
 }
+
 
 
 .image-2{
-    margin-top: 130px;
+
+
     height: 300px;
-    width: 500px;
-}
-
-
-.legende-1{
-    height: 600px;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    
-}
-
-.legende-2{
-    height: 400px;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    
-}
-
-
-.legende{
-    font-family: "Poppins", sans-serif;
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 18px;
-    
+    width: 40%; 
+    background-image: url("./images/numpy.png");  
+    background-size: cover;
+    z-index: 1;
 }
 
 
 .image-3{
-    height: 300px;
-    width: 80%; 
-    /* background-image: url("./images/speed_up_50iter.png");   */
+
+
+    height: 500px;
+    width: 40%; 
+    background-image: url("./images/dask_comp.png");  
     background-size: cover;
-    z-index: 1000;
+    z-index: 1;
 }
 
-.image-4{
-    height: 300px;
-    width: 80%; 
-    /* background-image: url("./images/efficiency_50iter.png");   */
-    background-size: cover;
-    z-index: 1000;
-}
+
+
+
 
 
 .trait-fin{
@@ -347,7 +298,6 @@ a{
     background-color:#00000014;  
 
 }
-
 
 
 .bas{
@@ -364,22 +314,22 @@ a{
     background: lightgrey; 
     box-shadow: -4px -12px 63px -29px rgba(0, 0, 0, 0.4); 
 
+
 }
 
 .suivant{
 
     font-family: "Poppins", sans-serif;
     font-size: 17px;
-    margin-right: 550px;
-    padding-bottom: 5pxx;
+    margin-left: 550px;
     color: black;
-    transform: translatey(-3px);
     text-decoration: underline;
 }
 
 .fleche{
-    margin-right: 10px;
-    transform: rotate(180deg);
+    padding-top: 3px;
+    margin-left: 5px;
+
     height: 20px;
     width: 20px;
 }
@@ -392,19 +342,101 @@ a{
     font-weight: bold;
 }
 
-.first-2{
 
 
+.image-reg{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 55%;
+    height: 500px;
+}
+
+.espace-vertical{
+        margin-bottom: 20px; /* Ajoutez la marge souhaitée ici */
+}
+
+
+.Re-1{
+
+    height: auto;
+    width: 85%;
+}
+
+.Re-2{
+
+    height: auto;
+    width: 80%;
+}
+
+.legende{
+    font-family: "Poppins", sans-serif;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;}
+
+
+.Ecoulement-lin{
+    margin-left: 70px;
+    height: auto;
+    width: 100%;
+}
+
+.image-reg-2{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 500px;
+}
+
+.centrer{
+    width: 100%;
+    height: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    height: 900px;
-    width: 100%;
-    margin-bottom: 30px;
 }
 
-.first-2 div{
 
-    margin: 0px 70px; 
+.centrer-image {
+    text-align: center;
+}
+
+.image-reg-2 img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto; /* Pour centrer l'image horizontalement */
+}
+
+.legende {
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 10px; /* Marge supérieure pour espacement */
+}
+
+.legende span a {
+    color: #888; /* Couleur du texte gris pour le lien uniquement */
+    text-decoration: none; /* Supprime le soulignement du lien */
+}
+
+.conteneur-image {
+    text-align: center;
+    margin-top: 20px; /* Marge au-dessus de l'image et de la légende */
+}
+
+.legende {
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 10px; /* Espacement entre la légende et la source */
+}
+
+.legende a {
+    color: #888; /* Couleur du texte gris pour le lien de la source */
+    text-decoration: none; /* Supprime le soulignement du lien */
 }
